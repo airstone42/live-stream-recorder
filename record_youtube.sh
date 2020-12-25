@@ -21,7 +21,7 @@ while true; do
     echo "$LOG_PREFIX Checking \"$LIVE_URL\"..."
 
     # Check if live stream available with wget
-    (wget -q -O- "$LIVE_URL" | grep -q '\\"isLive\\":true') && break
+    (wget -q -O- "$LIVE_URL" | grep -q '\"isLiveNow\":true') && break
 
     echo "$LOG_PREFIX The stream is not available now."
     echo "$LOG_PREFIX Retry after $INTERVAL seconds..."
